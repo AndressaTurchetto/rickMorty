@@ -20,12 +20,15 @@ HTML, CSS, JavaScript
 API Rick and Morty
 
 📸 Capturas de Tela
+
 ![alt text](assets/img-1.png)
 
 📸 Capturas de Tela
+
 ![alt text](assets/img-2.png)
 
 📸 Capturas de Tela Celular
+
 ![alt text](assets/img-3.png)
 
 🤝 Contribuições
