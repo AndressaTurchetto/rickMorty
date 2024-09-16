@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
+  <link rel="shortcut icon" href="./assets/logo-min.svg" type="image/x-icon">
+  <title>Rick and Morty - API</title>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div id="content"></div>
+      <section class="chars">
+        <img src="./assets/logo.svg" alt="Logo Rick And Morty">
+        <div>
+          <input type="text" id="name" placeholder="Busque pelo nome..." class="filter-input">
+        </div>
+        
+        <div class="filters rick-morty-filters">
+          <select name="species" id="species" class="filter custom-select">
+            <option value="" default>
+              Species
+            </option>
+            <option value="animal">Animal</option>
+            <option value="alien">Alien</option>
+            <option value="disease">Doença</option>
+            <option value="unknown">Desconhecido</option>
+            <option value="human">Humano</option>
+            <option value="humanoid">Humanoide</option>
+            <option value="mythological">Mitologico</option>
+            <option value="poopybutthole">Poopybutthole</option>
+            <option value="robot">Robo</option>
+          </select>
+          <select name="gender" id="gender" class="filter custom-select">
+            <option value="">
+              Genero
+            </option>
+            <option value="female">Feminino</option>
+            <option value="male">Masculino</option>
+            <option value="genderless">Sem Genero</option>
+            <option value="unknown">Desconhecido</option>
+          </select>
+          <select name="status" id="status" class="filter custom-select">
+            <option value="">
+              Status
+            </option>
+            <option value="alive">Vivo</option>
+            <option value="dead">Morto</option>
+            <option value="unknown">Desconhecido</option>
+          </select>
+        </div>
+        <div class="chars-container"></div>
+        <button id="load-more">
+          Carregar mais
+        </button>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="display.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
+
+</body>
+</html>
