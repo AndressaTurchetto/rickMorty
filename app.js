@@ -8,12 +8,13 @@ export async function getCharacters({name, species, gender, status, page = 1}) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const characters = await response.json();
-        return characters.results;
+        const data = await response.json();
+        return {
+            characters: data.results,
+            totalPages: data.info.pages
+        };
     } catch (error) {
         console.error('Error fetching characters:', error);
-        return [];
+        return { characters: [], totalPages: 0 };
     }
 }
-
-
